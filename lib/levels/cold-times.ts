@@ -25,7 +25,7 @@ function generate(rng: Rng): Problem {
 
   return {
     promptText: `Times with cold numbers! ${k} × ${par(-m)} means ${k} cold hops of ${m}. Then a pattern shows us the strangest rule in maths…`,
-    figure: numlineFigure(-12, 12, { pos: 0 }),
+    figure: numlineFigure(-12, 3, { pos: 0 }),
     steps: [
       numStep(
         "warm",
@@ -46,7 +46,7 @@ function generate(rng: Rng): Problem {
       choiceStep(
         rng,
         "stairs",
-        `Pattern staircase! ${2} × ${par(-m)} = ${fmt(-2 * m)},  1 × ${par(-m)} = ${fmt(-m)},  0 × ${par(-m)} = 0 … each answer climbs UP by ${m}. Keep climbing: ${par(-1)} × ${par(-m)} = ?`,
+        `Pattern staircase! 2 × ${par(-m)} = ${fmt(-2 * m)}, then 1 × ${par(-m)} = ${fmt(-m)}, then 0 × ${par(-m)} = 0 … each answer climbs UP by ${m}. Keep climbing: ${par(-1)} × ${par(-m)} = ?`,
         fmt(m),
         [fmt(-m), "0"],
         "Don't stop at zero — the staircase keeps climbing by the same amount, up into the warm numbers!",
