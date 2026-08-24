@@ -8,7 +8,7 @@ import { LEVELS } from "./index";
 import type { Problem } from "../types";
 import type { NumLineSpec, NumLineState, BalanceState, LineState } from "../model";
 
-const SEEDS = 500;
+const SEEDS = Number(process.env.AUDIT_SEEDS ?? 500);
 
 /** Every string she can ever see, in one list. */
 function displayStrings(p: Problem): string[] {

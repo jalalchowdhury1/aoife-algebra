@@ -29,12 +29,12 @@ function Chip({ w }: { w: Weight }) {
 function Pan({ items }: { items: Weight[] }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="min-h-14 min-w-28 px-2 pt-3 pb-1 flex items-end justify-center gap-1.5 flex-wrap">
+      <div className="min-h-14 min-w-20 sm:min-w-28 px-2 pt-3 pb-1 flex items-end justify-center gap-1.5 flex-wrap">
         {items.map((w, i) => (
           <Chip key={i} w={w} />
         ))}
       </div>
-      <div className="w-32 border-t-8 border-amber-500 rounded-full" />
+      <div className="w-24 sm:w-32 border-t-8 border-amber-500 rounded-full" />
     </div>
   );
 }
@@ -45,10 +45,10 @@ export function Balance({ spec }: { spec: FigureSpec }) {
   return (
     <div className="flex justify-center mb-3">
       <div className="expr-card">
-        <div className="flex items-end justify-center gap-4">
+        <div className="flex items-end justify-center gap-1.5 sm:gap-4">
           <Pan items={left} />
           <div className="flex flex-col items-center pb-1">
-            <div className="w-40 sm:w-48 border-t-8 border-purple-500 rounded-full" />
+            <div className="w-16 sm:w-48 border-t-8 border-purple-500 rounded-full" />
             <div
               className="w-0 h-0 border-l-[14px] border-r-[14px] border-t-[22px] border-l-transparent border-r-transparent border-t-purple-400"
             />

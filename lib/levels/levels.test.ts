@@ -17,7 +17,7 @@ import { makeRng } from "../rng";
 import { LEVELS } from "./index";
 import type { Problem, Step } from "../types";
 
-const SEEDS = 500;
+const SEEDS = Number(process.env.AUDIT_SEEDS ?? 500);
 const NO_NEGATIVES_BEFORE = 5; // array index of below-zero — levels 1..5 stay warm
 
 function numericAnswers(p: Problem): number[] {
