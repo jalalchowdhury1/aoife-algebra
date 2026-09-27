@@ -186,3 +186,13 @@ touch ranges, run the suite — these collisions are exactly what it catches.
   2. exponents-as-repeated-times mini-world,
   3. rules with − offsets in `find-the-rule` (book's Machine B is 3x − 1),
   4. optional Telegram round-summary like aoife-math (lib/telegram + API route).
+
+## Home Screen install (2026-09-27)
+
+Progress is localStorage-only, and Safari wipes a site's storage after 7 days without a
+visit. A web app **added to the Home Screen** is exempt from that purge, so the app ships
+`app/manifest.ts` (→ `/manifest.webmanifest`, display standalone), `app/apple-icon.png`
+(180px, → `<link rel="apple-touch-icon">`), `public/icon-192.png` + `public/icon-512.png`,
+and `appleWebApp` + `apple-mobile-web-app-capable` in `app/layout.tsx` metadata. Icons are a
+pink-400 → purple-500 gradient with a white glyph. Don't remove these. Caveat: the installed
+app has its OWN storage — stars earned in the Safari tab do not carry over to the icon.

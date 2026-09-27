@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Aoife — Mystery Numbers",
   description:
     "Pre-algebra for Aoife: mystery boxes, frogs below zero, balance scales and number machines — variables, integers and equations, one gentle level at a time.",
+  // Home Screen install — see app/manifest.ts (installed web apps keep localStorage).
+  applicationName: "Mystery Numbers",
+  appleWebApp: { capable: true, title: "Mystery Numbers", statusBarStyle: "default" },
+  other: { "apple-mobile-web-app-capable": "yes" },
 };
 
 export default function RootLayout({
